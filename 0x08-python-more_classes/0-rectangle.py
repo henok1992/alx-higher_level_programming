@@ -7,4 +7,3 @@
 class Rectangle:
     """Defines a reactangle"""
     pass
-
