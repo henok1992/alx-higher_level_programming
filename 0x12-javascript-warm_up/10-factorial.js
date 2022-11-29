@@ -1,11 +1,9 @@
 #!/usr/bin/node
+const { argv } = require('process');
 
-if (isNaN(parseInt(process.argv[2]))) {
-  console.log(1);
-} else {
-  let m = 1;
-  for (let i = parseInt(process.argv[2]); i > 0; i--) {
-    m = m * i;
-  }
-  console.log(m);
+function factorial (num) {
+  if (num === 0 || isNaN(num)) return (1);
+  return (num * factorial(num - 1));
 }
+
+console.log(factorial(parseInt(argv[2])));
